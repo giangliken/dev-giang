@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <title>dev.giang — Blog & Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Blog cá nhân của dev: chia sẻ code, trải nghiệm, project và cuộc sống IT." />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <!-- Background layers -->
+    <div class="bg-gradient"></div>
+    <div class="bg-noise"></div>
+
+    <!-- Top navigation -->
+    <header class="navbar">
+        <div class="nav-left">
+            <div class="logo">dev.<span>giang</span></div>
+        </div>
+        <nav class="nav-links">
+            <a href="#hero">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#blog">Blog</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <button class="theme-toggle" id="themeToggle" aria-label="Đổi theme">
+            <span class="theme-icon">☾</span>
+        </button>
+    </header>
+
+    <!-- Hero section -->
+    <main>
+        <section id="hero" class="section hero">
+            <div class="hero-content reveal">
+                <p class="hero-tag">👋 Xin chào, mình là</p>
+                <h1 class="hero-title">
+                    Trường Giang
+                    <span class="hero-gradient">Developer</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Code C# & Dart, thích vọc backend, mobile app, tối ưu performance
+                    và phá bug lúc 2 giờ sáng.
+                </p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn primary">Xem Projects</a>
+                    <a href="#blog" class="btn ghost">Đọc Blog</a>
+                </div>
+                <div class="hero-meta">
+                    <span>⚡ Full-stack vibes</span>
+                    <span>🧠 Clean Architecture</span>
+                    <span>🚀 Ship fast, break nothing</span>
+                </div>
+            </div>
+
+            <div class="hero-avatar reveal delay-1">
+                <div class="avatar-orbit">
+                    <div class="avatar-circle"></div>
+                    <div class="avatar-glow"></div>
+                </div>
+                <div class="avatar-floating-card">
+                    <p class="avatar-label">Now coding...</p>
+                    <code class="avatar-code">
+                        await dev.blog("C#, Dart, Flutter, .NET");
+                    </code>
+                </div>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section id="about" class="section">
+            <div class="section-header reveal">
+                <p class="section-tag">/about</p>
+                <h2>Về mình</h2>
+                <p>Đôi dòng tâm sự của một thằng dev mê code hơn mê ngủ.</p>
+            </div>
+
+            <div class="grid two-columns">
+                <div class="card glass reveal">
+                    <h3>TL;DR</h3>
+                    <p>
+                        Mình là developer tập trung vào <strong>.NET backend</strong> và
+                        <strong>Flutter mobile</strong>. Thích build những hệ thống
+                        có kiến trúc rõ ràng, log bài bản, dễ scale và dễ maintain.
+                    </p>
+                    <p>
+                        Khi không code thì mình đọc docs, xem benchmark, nghịch performance
+                        và refactor code cũ cho đỡ “mùi”.
+                    </p>
+                </div>
+
+                <div class="card glass timeline reveal delay-1">
+                    <h3>Timeline ngắn gọn</h3>
+                    <ul>
+                        <li>
+                            <span class="time">2023 → nay</span>
+                            <div>
+                                <strong>Full-stack dev</strong> — ASP.NET Core, Flutter, SQL Server,
+                                triển khai các hệ thống quản lý, app sinh viên, vv…
+                            </div>
+                        </li>
+                        <li>
+                            <span class="time">2022</span>
+                            <div>
+                                <strong>Bắt đầu với C# & Dart</strong> —
+                                từ “Hello World” đến clean architecture.
+                            </div>
+                        </li>
+                        <li>
+                            <span class="time">Trước nữa</span>
+                            <div>
+                                Vọc vạch, cài lại Windows như cơm bữa, fix mạng, fix máy cho cả nhà.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills" class="section">
+            <div class="section-header reveal">
+                <p class="section-tag">/skills</p>
+                <h2>Stack mình dùng</h2>
+                <p>Không cần tất cả mọi thứ, chỉ cần đủ sâu những thứ mình chọn.</p>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-card reveal">
+                    <p class="skill-title">Backend</p>
+                    <p class="skill-stack">C#, ASP.NET Core, Web API, Entity Framework</p>
+                    <div class="skill-meter">
+                        <div style="--value: 82%"></div>
+                    </div>
+                </div>
+                <div class="skill-card reveal delay-1">
+                    <p class="skill-title">Mobile</p>
+                    <p class="skill-stack">Dart, Flutter, REST API, Firebase</p>
+                    <div class="skill-meter">
+                        <div style="--value: 78%"></div>
+                    </div>
+                </div>
+                <div class="skill-card reveal delay-2">
+                    <p class="skill-title">Database & Infra</p>
+                    <p class="skill-stack">SQL Server, Migrations, Cloudflare tunnel</p>
+                    <div class="skill-meter">
+                        <div style="--value: 75%"></div>
+                    </div>
+                </div>
+                <div class="skill-card reveal delay-3">
+                    <p class="skill-title">Dev Vibes</p>
+                    <p class="skill-stack">Git, clean code, debug 3 giờ sáng</p>
+                    <div class="skill-meter">
+                        <div style="--value: 90%"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="section">
+            <div class="section-header reveal">
+                <p class="section-tag">/projects</p>
+                <h2>Projects nổi bật</h2>
+                <p>Một vài thứ mình đã build và khá tự hào.</p>
+            </div>
+
+            <div class="grid three-columns">
+                <article class="card project-card reveal">
+                    <div class="project-badge">.NET</div>
+                    <h3>BlueSchool System</h3>
+                    <p>
+                        Hệ thống quản lý trường học: sinh viên, lớp học, lịch học, điểm, lịch thi.
+                        Backend ASP.NET Core, SQL Server, JWT auth.
+                    </p>
+                    <ul class="project-tags">
+                        <li>ASP.NET Core</li>
+                        <li>SQL Server</li>
+                        <li>JWT</li>
+                    </ul>
+                    <a href="#" class="project-link">Chi tiết sau nhé →</a>
+                </article>
+
+                <article class="card project-card reveal delay-1">
+                    <div class="project-badge">Flutter</div>
+                    <h3>BlueNet App</h3>
+                    <p>
+                        App mobile cho sinh viên: xem thời khóa biểu, điểm,
+                        điểm danh, nhận thông báo real-time.
+                    </p>
+                    <ul class="project-tags">
+                        <li>Flutter</li>
+                        <li>Dio</li>
+                        <li>Firebase</li>
+                    </ul>
+                    <a href="#" class="project-link">Chi tiết sau nhé →</a>
+                </article>
+
+                <article class="card project-card reveal delay-2">
+                    <div class="project-badge">Side project</div>
+                    <h3>Dev Tools & Experiments</h3>
+                    <p>
+                        Nơi mình thử nghiệm thêm: performance test, logging, CI/CD,
+                        refactor kiến trúc, playground thử ý tưởng mới.
+                    </p>
+                    <ul class="project-tags">
+                        <li>Experiments</li>
+                        <li>Performance</li>
+                        <li>Refactor</li>
+                    </ul>
+                    <a href="#" class="project-link">Chi tiết sau nhé →</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- Blog -->
+        <section id="blog" class="section">
+            <div class="section-header reveal">
+                <p class="section-tag">/blog</p>
+                <h2>Blog & note linh tinh</h2>
+                <p>Nơi mình viết lại những gì học được để khỏi quên.</p>
+            </div>
+
+            <div class="blog-list">
+                <article class="card blog-card reveal">
+                    <p class="blog-meta">#01 • Backend • 10 phút đọc</p>
+                    <h3>Viết API .NET sao cho “ngon”, đỡ muốn refactor lại</h3>
+                    <p>
+                        Từ naming, DTO, validation, middleware cho đến logging và
+                        cấu trúc folder. Những thứ mình rút ra sau vài lần phá project.
+                    </p>
+                    <a href="#" class="blog-link">Đọc sau (chưa viết thiệt) →</a>
+                </article>
+
+                <article class="card blog-card reveal delay-1">
+                    <p class="blog-meta">#02 • Flutter • 8 phút đọc</p>
+                    <h3>Dio, error handling & cách mình show lỗi cho user</h3>
+                    <p>
+                        Làm sao để app Flutter gọi API mượt, handle timeout, 401/403,
+                        show dialog gọn gàng & log đủ dữ kiện để debug.
+                    </p>
+                    <a href="#" class="blog-link">Đọc sau →</a>
+                </article>
+
+                <article class="card blog-card reveal delay-2">
+                    <p class="blog-meta">#03 • Dev life</p>
+                    <h3>Chuyện 2 giờ sáng debug và cảm giác “à hoá ra là vậy”</h3>
+                    <p>
+                        Mấy khoảnh khắc fix xong bug mà tự nhiên thấy cuộc đời có ý nghĩa lại.
+                    </p>
+                    <a href="#" class="blog-link">Đọc sau →</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="section">
+            <div class="section-header reveal">
+                <p class="section-tag">/contact</p>
+                <h2>Liên hệ</h2>
+                <p>Có job, project thú vị hoặc muốn tám chuyện dev? Nhắn mình.</p>
+            </div>
+
+            <div class="contact-wrapper">
+                <div class="card glass contact-card reveal">
+                    <h3>Ping mình qua</h3>
+                    <ul class="contact-list">
+                        <li>
+                            <span class="contact-label">Email</span>
+                            <span class="contact-value">youremail@example.com</span>
+                        </li>
+                        <li>
+                            <span class="contact-label">GitHub</span>
+                            <span class="contact-value">@yourgithub</span>
+                        </li>
+                        <li>
+                            <span class="contact-label">LinkedIn</span>
+                            <span class="contact-value">/in/your-link</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <form class="card glass contact-form reveal delay-1">
+                    <h3>Leave a message</h3>
+                    <div class="form-group">
+                        <label for="name">Tên</label>
+                        <input id="name" type="text" placeholder="Cho mình biết gọi bạn là gì" />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input id="email" type="email" placeholder="Để mình tiện trả lời" />
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Nội dung</label>
+                        <textarea id="message" rows="4" placeholder="Gửi lời nhắn cho mình..."></textarea>
+                    </div>
+                    <button type="button" class="btn primary full-width">
+                        Gửi (demo thôi, chưa gửi thật)
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© <span id="year"></span> dev.giang — Built with C#, Dart & a bit of caffeine.</p>
+    </footer>
+</body>
+</html>
