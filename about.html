@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Về mình — dev.giang</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <div class="bg-gradient"></div>
+    <div class="bg-noise"></div>
+
+    <header class="navbar">
+        <div class="nav-left">
+            <div class="logo">dev.<span>giang</span></div>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="skills.html">Skills</a>
+            <a href="projects.html">Projects</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <button class="theme-toggle" id="themeToggle" aria-label="Đổi theme">
+            <span class="theme-icon">☾</span>
+        </button>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="section-header reveal">
+                <p class="section-tag">/about</p>
+                <h2>Về mình</h2>
+                <p>Đôi dòng tâm sự của một thằng dev mê code hơn mê ngủ.</p>
+            </div>
+
+            <div class="grid two-columns">
+                <div class="card glass reveal">
+                    <h3>TL;DR</h3>
+                    <p>
+                        Sinh viên năm cuối HUTECH (2022-2026), đạt <strong>GPA 3.7/4.0</strong> và <strong>Sinh viên tiêu biểu</strong> năm 2023, 2024, 2025.
+                        Đam mê <strong>full-stack development</strong> với C#, Flutter & ASP.NET Core.
+                    </p>
+                    <p>
+                        Dài hạn: trở thành Senior Software Engineer với expertise về systems, CI/CD, Docker và Cloud Computing.
+                        Hiện đã hoàn thành 4 dự án internship từ Mobile, Web, Desktop đến API development.
+                    </p>
+                </div>
+
+                <div class="card glass timeline reveal delay-1">
+                    <h3>Kinh nghiệm làm việc</h3>
+                    <ul>
+                        <li>
+                            <span class="time">09/2025 - 11/2025</span>
+                            <div>
+                                <strong>Mobile App Developer (Flutter)</strong> — Training Management App
+                            </div>
+                        </li>
+                        <li>
+                            <span class="time">05/2025 - 07/2025</span>
+                            <div>
+                                <strong>Web Developer</strong> — SPACEGO E-Commerce Website (ASP.NET MVC)
+                            </div>
+                        </li>
+                        <li>
+                            <span class="time">08/2024 - 01/2025</span>
+                            <div>
+                                <strong>Mobile App Developer (Flutter)</strong> — Bluetooth Attendance System
+                            </div>
+                        </li>
+                        <li>
+                            <span class="time">01/2024 - 05/2024</span>
+                            <div>
+                                <strong>Desktop Developer</strong> — SPACEMARKET Sales Management System
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="card glass reveal delay-2">
+                    <h3>Sự kiện &amp; Cuộc thi</h3>
+                    <ul class="achievements-list">
+                        <li>
+                            <strong>07/12/2024 — HDBank Hackathon</strong>
+                            <div class="meta">Thành viên đội — Tham gia Hackathon</div>
+                            <p>Tham gia phát triển giải pháp trong khuôn khổ cuộc thi HDBank Hackathon.</p>
+                        </li>
+                        <li>
+                            <strong>21/06/2024 — My First Website 2024</strong>
+                            <div class="meta">Tham dự — WordPress design</div>
+                            <p>Thiết kế website bằng WordPress, tập trung vào UX, responsive và trải nghiệm người dùng.</p>
+                        </li>
+                        <li>
+                            <strong>26/07/2024 — My First Website 2023 (Mùa 3)</strong>
+                            <div class="meta">Tham dự — WordPress design</div>
+                            <p>Thiết kế website bằng WordPress theo chủ đề cuộc thi, tối ưu hóa giao diện và chức năng.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© <span id="year"></span> Nguyễn Trường Giang — Built with C#, Dart & a bit of caffeine.</p>
+    </footer>
+</body>
+
+</html>

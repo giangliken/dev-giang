@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Offline-first cho app sinh viên — dev.giang</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <script defer src="/script.js"></script>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="nav-left">
+            <div class="logo">dev.<span>giang</span></div>
+        </div>
+        <nav class="nav-links">
+            <a href="/index.html">Home</a>
+            <a href="/blog.html">Blog</a>
+        </nav>
+    </header>
+
+    <main class="section">
+        <div class="section-header">
+            <p class="section-tag">/blog</p>
+            <h2>Thiết kế offline-first cho app sinh viên</h2>
+        </div>
+
+        <article class="card">
+            <p><strong>Tóm tắt:</strong> Kiến trúc offline-first cho mobile app: patterns lưu local, sync, reconcile, bảo mật data và testing. Lấy ví dụ từ ứng dụng điểm danh để minh họa trade-offs.</p>
+
+            <h3>1. Local-first architecture</h3>
+            <p>Cho phép user thao tác ngay lập tức trên local DB (SQLite, Hive, ObjectBox). Thay vì chờ network, các thao tác được persist cục bộ và push lên server khi có kết nối.</p>
+
+            <h3>2. Queue & synchronization</h3>
+            <p>Ghi các action vào một queue (append-only). Khi online, gửi batch requests, xử lý ACK/NACK, và cập nhật trạng thái local. Batch giảm overhead và tránh spike tải lên server.</p>
+
+            <h3>3. Conflict resolution strategies</h3>
+            <p>Chọn strategy phù hợp: last-write-wins cho simplicity, operational transform / CRDT cho collaborative cases, hoặc application-level merge với user prompt cho dữ liệu nhạy cảm. Log conflicts để phân tích sau.</p>
+
+            <h3>4. Data integrity & security</h3>
+            <p>Mã hoá local store nếu chứa dữ liệu nhạy cảm. Xác thực và authorize trên server khi nhận sync. Sử dụng secure transport (HTTPS/TLS) và sign payload khi cần.</p>
+
+            <h3>5. UX considerations</h3>
+            <p>Hiển thị network status, queue length, và kết quả sync. Cho phép manual retry/refresh và provide clear feedback khi có conflict. Giữ UI responsive bằng optimistic updates.</p>
+
+            <h3>6. Testing</h3>
+            <p>Viết unit tests cho sync logic, integration tests với mocked server, và e2e tests mô phỏng mạng chậm/disconnected. Stress test queue để phát hiện edge cases.</p>
+
+            <h3>Kết luận</h3>
+            <p>Offline-first tăng trải nghiệm người dùng nhưng đòi hỏi thiết kế sync/merge cẩn trọng. Bắt đầu đơn giản (local queue, last-write-wins) và mở rộng khi cần collaboration phức tạp hơn.</p>
+
+            <p><a href="/blog.html" class="project-link">← Quay về Blog</a></p>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <p>© <span id="year"></span> Nguyễn Trường Giang</p>
+    </footer>
+</body>
+
+</html>

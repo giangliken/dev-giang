@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Contact — dev.giang</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome for nicer social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <div class="bg-gradient"></div>
+    <div class="bg-noise"></div>
+
+    <header class="navbar">
+        <div class="nav-left">
+            <div class="logo">dev.<span>giang</span></div>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="skills.html">Skills</a>
+            <a href="projects.html">Projects</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <button class="theme-toggle" id="themeToggle" aria-label="Đổi theme">
+            <span class="theme-icon">☾</span>
+        </button>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="section-header reveal">
+                <p class="section-tag">/contact</p>
+                <h2>Liên hệ</h2>
+                <p>Có job, project thú vị hoặc muốn tám chuyện dev? Nhắn mình.</p>
+            </div>
+
+            <div class="contact-wrapper">
+                <div class="card glass contact-card reveal">
+                    <h3>Ping mình qua</h3>
+                    <ul class="contact-list">
+                        <li>
+                            <span class="contact-label">Email</span>
+                            <span class="contact-value">giangliken@gmail.com</span>
+                        </li>
+                        <li>
+                            <span class="contact-label">Phone</span>
+                            <span class="contact-value">0367509647</span>
+                        </li>
+                        <li>
+                            <span class="contact-label">GitHub</span>
+                            <span class="contact-value">github.com/giangliken</span>
+                        </li>
+                        <li>
+                            <span class="contact-label">Address</span>
+                            <span class="contact-value">Khu Phố 9, Phường Linh Xuân, TP.HCM</span>
+                        </li>
+                    </ul>
+
+                    <div class="social-links">
+                        <a class="facebook" href="https://facebook.com/giangliken" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+                        </a>
+
+                        <a class="github" href="https://github.com/giangliken" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                            <i class="fa-brands fa-github" aria-hidden="true"></i>
+                        </a>
+
+                        <a class="linkedin" href="https://www.linkedin.com/in/nguyen-truong-giang/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <form class="card glass contact-form reveal delay-1" action="https://formspree.io/f/mgowgnzw" method="POST">
+                    <h3>Để lại tin nhắn</h3>
+                    <div class="form-group">
+                        <label for="name">Tên</label>
+                        <input id="name" type="text" name="name" placeholder="Cho mình biết gọi bạn là gì" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input id="email" type="email" name="email" placeholder="Để mình tiện trả lời" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Nội dung</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Gửi lời nhắn cho mình..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn primary full-width">
+                        Gửi tin nhắn
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© <span id="year"></span> Nguyễn Trường Giang — Built with C#, Dart & a bit of caffeine.</p>
+    </footer>
+</body>
+
+</html>

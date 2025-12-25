@@ -14,6 +14,83 @@
     --transition-fast: 0.18s ease-out;
 }
 
+/* Overlay helpers used across the stylesheet so theme can flip them */
+:root {
+    --overlay-xx: rgba(255,255,255,0.03);
+    --overlay-x: rgba(255,255,255,0.05);
+    --overlay: rgba(255,255,255,0.06);
+    --overlay-strong: rgba(255,255,255,0.08);
+}
+
+/* Light theme overrides when `body.light-theme` is present */
+body.light-theme {
+    --bg: #f7f7ff;
+    --bg-elevated: #ffffff;
+    --glass: rgba(255, 255, 255, 0.9);
+    --accent: #0078d4;
+    --accent-soft: rgba(0, 120, 212, 0.08);
+    --accent-2: #68a4ff;
+    --text: #050712;
+    --muted: #5c6075;
+    --border-subtle: rgba(0, 0, 0, 0.06);
+    --shadow-soft: 0 18px 50px rgba(10, 12, 30, 0.06);
+}
+
+/* Invert overlays for light theme (use subtle dark overlays instead of white) */
+body.light-theme {
+    --overlay-xx: rgba(0,0,0,0.02);
+    --overlay-x: rgba(0,0,0,0.04);
+    --overlay: rgba(0,0,0,0.06);
+    --overlay-strong: rgba(0,0,0,0.08);
+}
+
+/* Broad light-theme fallbacks to catch remaining hard-coded white overlays */
+body.light-theme {
+    /* Cards, glass panels */
+    --card-bg: var(--bg-elevated);
+}
+
+body.light-theme .card,
+body.light-theme .card.glass,
+body.light-theme .avatar-floating-card,
+body.light-theme .avatar-orbit {
+    background: var(--card-bg);
+    border-color: rgba(0,0,0,0.06);
+    box-shadow: 0 8px 30px rgba(10,12,30,0.04);
+}
+
+body.light-theme .hero-stats span,
+body.light-theme .hero-meta span,
+body.light-theme .project-badge,
+body.light-theme .skill-card,
+body.light-theme .timeline li {
+    background: var(--overlay-xx);
+    border-color: var(--overlay);
+    color: var(--muted);
+}
+
+body.light-theme .btn-cv-glass,
+body.light-theme .btn.ghost {
+    background: rgba(250,250,250,0.92);
+    border-color: rgba(0,0,0,0.06);
+    color: var(--text);
+}
+
+body.light-theme .btn-cv-glass:hover {
+    background: rgba(245,245,245,0.98);
+}
+
+body.light-theme .social-links a {
+    background: var(--overlay-xx);
+    border: 1px solid rgba(0,0,0,0.04);
+}
+
+/* Ensure subtle overlays used by components default to variables */
+body.light-theme .badge,
+body.light-theme .chip {
+    background: var(--overlay-xx);
+}
+
 *,
 *::before,
 *::after {
@@ -65,14 +142,14 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 0 48px;
-    backdrop-filter: blur(16px);
-    background: linear-gradient(
+    backdrop-filter: blur(12px);
+    background: var(--navbar-bg, linear-gradient(
         to bottom,
         rgba(3, 5, 18, 0.92),
         rgba(3, 5, 18, 0.7),
         transparent
-    );
-    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    ));
+    border-bottom: 1px solid var(--border-subtle);
 }
 
 .logo {
@@ -124,6 +201,15 @@ body {
     width: 100%;
 }
 
+/* Active nav link (current page) */
+.nav-links a.active {
+    color: var(--text);
+}
+
+.nav-links a.active::after {
+    width: 100%;
+}
+
 /* Theme toggle */
 .theme-toggle {
     border: 1px solid var(--border-subtle);
@@ -143,6 +229,86 @@ body {
 .theme-toggle:hover {
     background: rgba(30, 32, 60, 0.95);
     transform: translateY(-1px);
+}
+
+/* Light theme adjustments for the toggle and navbar */
+body.light-theme .theme-toggle {
+    background: rgba(255, 255, 255, 0.92);
+    color: var(--text);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+body.light-theme .navbar {
+    --navbar-bg: linear-gradient(
+        to bottom,
+        rgba(255,255,255,0.98),
+        rgba(255,255,255,0.95),
+        transparent
+    );
+}
+
+/* Specific element overrides for light theme to replace hard-coded dark rgba values */
+body.light-theme .hero-stats span,
+body.light-theme .hero-meta span {
+    background: rgba(6, 8, 30, 0.04);
+    border-color: rgba(0,0,0,0.06);
+    color: var(--muted);
+}
+
+body.light-theme .btn.primary {
+    color: #ffffff;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+body.light-theme .btn.ghost {
+    background: rgba(250,250,250,0.9);
+    color: var(--text);
+    border-color: rgba(0,0,0,0.06);
+}
+
+body.light-theme .btn.ghost:hover {
+    background: rgba(245,245,245,0.98);
+}
+
+body.light-theme .btn-cv-glass {
+    background: rgba(10,12,20,0.04);
+    color: var(--text);
+    border-color: rgba(0,0,0,0.06);
+    box-shadow: 0 6px 18px rgba(10, 12, 30, 0.04);
+}
+
+body.light-theme .btn-cv-glass:hover {
+    background: rgba(10,12,20,0.06);
+}
+
+body.light-theme .avatar-orbit {
+    border: 1px solid rgba(10, 20, 40, 0.06);
+    box-shadow: 0 10px 30px rgba(10,12,30,0.06);
+    background: radial-gradient(circle at 30% 0%, rgba(0,0,0,0.02), transparent 55%);
+}
+
+body.light-theme .avatar-floating-card {
+    background: rgba(255,255,255,0.96);
+    border: 1px solid rgba(0,0,0,0.06);
+    box-shadow: 0 10px 30px rgba(10,12,30,0.04);
+}
+
+body.light-theme .card {
+    background: var(--bg-elevated);
+    border: 1px solid rgba(0,0,0,0.06);
+    box-shadow: var(--shadow-soft);
+}
+
+body.light-theme .card.glass {
+    background: rgba(255,255,255,0.9);
+}
+
+body.light-theme .card::before {
+    background: radial-gradient(
+        circle at top left,
+        rgba(255, 255, 255, 0.06),
+        transparent 55%
+    );
 }
 
 /* Sections */
@@ -217,6 +383,35 @@ main {
     margin-bottom: 20px;
 }
 
+/* Compact hero-specific styles for recruiter-focused layout */
+.hero-highlights ul {
+    list-style: none;
+    padding: 0;
+    margin: 8px 0 16px;
+    display: grid;
+    gap: 6px;
+    color: var(--muted);
+}
+
+.hero-highlights li {
+    font-size: 0.95rem;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 14px;
+    margin-top: 12px;
+}
+
+.hero-stats span {
+    background: var(--overlay-xx);
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    color: var(--muted);
+    border: 1px solid var(--overlay-x);
+}
+
 .hero-actions {
     display: flex;
     flex-wrap: wrap;
@@ -256,7 +451,7 @@ main {
 .btn.ghost {
     background: rgba(6, 8, 30, 0.7);
     color: var(--text);
-    border-color: rgba(255, 255, 255, 0.12);
+    border-color: var(--overlay-strong);
     backdrop-filter: blur(12px);
     transition: background var(--transition-fast), border-color var(--transition-fast),
         transform var(--transition-fast);
@@ -279,18 +474,58 @@ main {
     font-size: 0.78rem;
     padding: 4px 10px;
     border-radius: 999px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid var(--overlay-strong);
     background: rgba(6, 8, 30, 0.7);
     color: var(--muted);
 }
 
 /* Hero avatar / card */
+/* Style cho nút CV dưới Avatar */
 .hero-avatar {
-    position: relative;
+    /* Đảm bảo các phần tử xếp dọc và căn giữa */
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
+
+.btn-cv-glass {
+    margin-top: 20px; /* Cách phần code box một chút */
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* Khoảng cách giữa icon và chữ */
+    padding: 10px 24px;
+    
+    /* Hiệu ứng Glassmorphism (Kính mờ) */
+    background: var(--overlay-x);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--overlay-strong);
+    border-radius: 50px; /* Bo tròn hình viên thuốc */
+    
+    /* Text style */
+    color: #fff; /* Hoặc var(--text-color) nếu bạn có biến */
+    text-decoration: none;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.btn-cv-glass .icon {
+    font-size: 1.1rem;
+}
+
+/* Hiệu ứng khi di chuột vào */
+.btn-cv-glass:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-3px); /* Nổi lên nhẹ */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark/Light mode support (nếu web bạn dùng biến màu) */
+/* Ví dụ chỉnh màu chữ khi nền sáng nếu cần thiết */
 
 .avatar-orbit {
     position: relative;
@@ -301,31 +536,18 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: radial-gradient(circle at 30% 0%, rgba(255, 255, 255, 0.08), transparent 55%);
+    background: radial-gradient(circle at 30% 0%, var(--overlay-strong), transparent 55%);
     box-shadow: 0 18px 60px rgba(0, 0, 0, 0.8);
     overflow: hidden;
 }
 
-.avatar-circle {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    background: radial-gradient(circle at 30% 20%, #fefefe, #9ea8ff);
-    position: relative;
+.avatar-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Giữ tỉ lệ ảnh, cắt phần thừa */
+    border-radius: 50%; /* Bo tròn ảnh (đề phòng style cha bị lỗi) */
 }
 
-.avatar-circle::after {
-    content: "</>";
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: "Fira Code", monospace;
-    font-size: 2.2rem;
-    color: #050615;
-    font-weight: 700;
-}
 
 .avatar-glow {
     position: absolute;
@@ -474,7 +696,8 @@ main {
 
 /* Projects */
 .project-card {
-    padding-top: 24px;
+    position: relative;
+    padding-top: 40px;
 }
 
 .project-badge {
@@ -488,6 +711,7 @@ main {
     background: rgba(76, 243, 192, 0.15);
     color: var(--accent);
     border: 1px solid rgba(76, 243, 192, 0.4);
+    z-index: 3;
 }
 
 .project-card h3 {
@@ -739,3 +963,153 @@ main {
         grid-template-columns: minmax(0, 1fr);
     }
 }
+
+
+/* Social links (contact) */
+.social-links {
+    margin-top: 12px;
+    display: flex;
+    gap: 12px;
+}
+.social-links a {
+    color: var(--muted);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    transition: background var(--transition-fast), color var(--transition-fast), transform 0.12s ease;
+    text-decoration: none;
+}
+.social-links svg {
+    width: 18px;
+    height: 18px;
+    color: currentColor;
+    display: block;
+}
+/* Font Awesome icon sizing inside social links */
+.social-links i {
+    font-size: 18px;
+    line-height: 1;
+    display: block;
+}
+.social-links a:hover {
+    color: var(--text);
+    background: rgba(255,255,255,0.04);
+    transform: translateY(-2px);
+}
+.social-links a.facebook:hover { color: #1877F2; background: rgba(24,119,242,0.08); }
+.social-links a.github:hover { color: #ffffff; background: linear-gradient(90deg, #111, #333); }
+.social-links a.linkedin:hover { color: #0A66C2; background: rgba(10,102,194,0.08); }
+
+/* Certificates grid */
+.certificates {
+    margin-top: 18px;
+    padding: 18px;
+}
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 14px;
+    margin-top: 12px;
+    align-items: start;
+    justify-items: center;
+}
+.cert-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 260px;
+    position: relative;
+}
+.cert-item img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    object-fit: contain;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.04);
+    border-radius: 8px;
+    padding: 8px;
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+.cert-item img:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+}
+.cert-item figcaption {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    color: var(--muted);
+    text-align: center;
+}
+
+.lightbox-caption {
+    margin-top: 12px;
+    color: var(--text);
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* Download overlay button on certificate items */
+.cert-download {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: rgba(0,0,0,0.45);
+    border: 1px solid rgba(255,255,255,0.06);
+    color: var(--text);
+    padding: 6px 8px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    opacity: 0;
+    transform: translateY(-4px);
+    transition: opacity 0.14s ease, transform 0.14s ease;
+}
+.cert-item:hover .cert-download { opacity: 1; transform: translateY(0); }
+
+@media (max-width: 480px) {
+    .cert-item { max-width: 100%; }
+}
+
+/* Lightbox / modal for certificate preview */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(2,6,12,0.78);
+    z-index: 120;
+    padding: 24px;
+}
+.lightbox.visible { display: flex; }
+.lightbox img {
+    max-width: 96%;
+    max-height: 92%;
+    border-radius: 8px;
+    box-shadow: 0 30px 120px rgba(0,0,0,0.75);
+    background: rgba(255,255,255,0.02);
+}
+.lightbox-close {
+    position: absolute;
+    right: 18px;
+    top: 18px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.06);
+    color: var(--text);
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    cursor: pointer;
+}
+.cert-grid img { cursor: pointer; }
+
+

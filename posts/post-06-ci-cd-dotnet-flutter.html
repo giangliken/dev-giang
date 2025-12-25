@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>CI/CD cho .NET & Flutter — dev.giang</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <script defer src="/script.js"></script>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="nav-left">
+            <div class="logo">dev.<span>giang</span></div>
+        </div>
+        <nav class="nav-links">
+            <a href="/index.html">Home</a>
+            <a href="/blog.html">Blog</a>
+        </nav>
+    </header>
+
+    <main class="section">
+        <div class="section-header">
+            <p class="section-tag">/blog</p>
+            <h2>CI/CD cơ bản cho .NET & Flutter</h2>
+        </div>
+
+                <article class="card">
+                        <p><strong>Tóm tắt:</strong> Hướng dẫn thiết lập CI/CD thực tế cho .NET backend & Flutter app: cấu trúc pipeline, caching, test stages, release strategy và best practices cho secrets/rollbacks.</p>
+
+                        <h3>1. Pipeline stages</h3>
+                        <p>Phân tách pipeline: install deps → build → test → package/artifact → deploy. Đảm bảo mỗi stage fail fast nếu tồn tại lỗi.</p>
+
+                        <h3>2. Caching</h3>
+                        <p>Cache NuGet packages, .pub-cache (Flutter), node_modules nếu có frontend. Cache giúp giảm thời gian build và tiết kiệm CI minutes.</p>
+
+                        <h3>3. Testing & quality gates</h3>
+                        <p>Chạy unit tests, static analysis (linters), và integration tests. Thiết lập quality gates: không merge nếu coverage giảm hoặc test fail. Sử dụng matrix build nếu cần kiểm tra nhiều version.</p>
+
+                        <h3>4. Artifact & deployment strategy</h3>
+                        <p>Publish build artifacts (zip, docker image, apk). Sử dụng staging environment cho smoke tests và canary hoặc blue-green deployment để giảm rủi ro khi release production.</p>
+
+                        <h3>5. Secrets & configuration</h3>
+                        <p>Quản lý secrets qua CI provider (GitHub Secrets, Azure Key Vault). Không commit secrets vào repo. Dùng environment-specific configuration và feature flags để điều khiển behavior production.</p>
+
+                        <h3>6. Rollback & monitoring</h3>
+                        <p>Luôn có kế hoạch rollback (revert release hoặc deploy previous artifact). Instrument application với metrics và alerts để detect regressions sớm.</p>
+
+                        <h3>7. Example (GitHub Actions snippet)</h3>
+                        <pre><code>name: CI
+on: [push]
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+            - name: Setup .NET
+                uses: actions/setup-dotnet@v3
+            - name: Restore & Build
+                run: dotnet build --no-restore
+</code></pre>
+
+                        <p><a href="/blog.html" class="project-link">← Quay về Blog</a></p>
+                </article>
+    </main>
+
+    <footer class="footer">
+        <p>© <span id="year"></span> Nguyễn Trường Giang</p>
+    </footer>
+</body>
+
+</html>

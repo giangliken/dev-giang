@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="600" viewBox="0 0 1200 600" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="heroTitle heroDesc">
+  <title id="heroTitle">Hero illustration for Nguyễn Trường Giang</title>
+  <desc id="heroDesc">Abstract developer illustration with laptop, code brackets and colorful shapes.</desc>
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#68A4FF" />
+      <stop offset="100%" stop-color="#4CF3C0" />
+    </linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FFB86B" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#FF6B9A" stop-opacity="0.9" />
+    </linearGradient>
+    <filter id="f1" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="18" result="b" />
+      <feBlend in="SourceGraphic" in2="b" mode="normal" />
+    </filter>
+  </defs>
+
+  <!-- background blobs -->
+  <circle cx="220" cy="120" r="120" fill="url(#g1)" opacity="0.18" filter="url(#f1)" />
+  <circle cx="980" cy="420" r="160" fill="url(#g2)" opacity="0.16" filter="url(#f1)" />
+
+  <!-- laptop -->
+  <g transform="translate(300,210)">
+    <rect x="0" y="0" width="520" height="320" rx="18" fill="#0A0E1A" />
+    <rect x="12" y="16" width="496" height="220" rx="8" fill="#071023" />
+    <!-- screen content: code lines -->
+    <g transform="translate(28,36)" fill="#9FB7FF">
+      <rect x="0" y="0" width="360" height="12" rx="6" fill="#9FB7FF" opacity="0.95" />
+      <rect x="0" y="24" width="420" height="12" rx="6" fill="#7EDDB8" opacity="0.95" />
+      <rect x="0" y="48" width="300" height="12" rx="6" fill="#C7C6FF" opacity="0.95" />
+      <rect x="0" y="72" width="380" height="12" rx="6" fill="#FFCAA3" opacity="0.95" />
+    </g>
+    <rect x="16" y="248" width="488" height="12" rx="6" fill="#0B1222" />
+    <rect x="0" y="272" width="520" height="32" rx="10" fill="#081026" />
+    <circle cx="46" cy="288" r="4" fill="#FF6B9A" />
+    <circle cx="68" cy="288" r="4" fill="#FFD56B" />
+    <circle cx="90" cy="288" r="4" fill="#68A4FF" />
+  </g>
+
+  <!-- avatar/profile card -->
+  <g transform="translate(60,320)">
+    <rect x="0" y="0" width="200" height="220" rx="14" fill="#071023" opacity="0.92" />
+    <circle cx="100" cy="72" r="40" fill="#15243A" />
+    <path d="M84 86c6 6 16 6 22 0" stroke="#9FB7FF" stroke-width="3" stroke-linecap="round" fill="none" />
+    <text x="100" y="138" font-family="Space Grotesk, sans-serif" font-size="18" fill="#EAF6F1" text-anchor="middle">Nguyễn Trường Giang</text>
+    <text x="100" y="160" font-family="Fira Code, monospace" font-size="12" fill="#9FB7FF" text-anchor="middle">Developer • Flutter • .NET</text>
+  </g>
+
+  <!-- decorative code brackets -->
+  <g transform="translate(860,80)" fill="#9FB7FF" opacity="0.95">
+    <path d="M12 4 L4 12 L12 20" stroke="url(#g1)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    <path d="M44 4 L52 12 L44 20" stroke="url(#g2)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+  </g>
+
+</svg>

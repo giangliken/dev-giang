@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Skills — dev.giang</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <div class="bg-gradient"></div>
+    <div class="bg-noise"></div>
+
+    <header class="navbar">
+        <div class="nav-left">
+            <div class="logo">dev.<span>giang</span></div>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="skills.html">Skills</a>
+            <a href="projects.html">Projects</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <button class="theme-toggle" id="themeToggle" aria-label="Đổi theme">
+            <span class="theme-icon">☾</span>
+        </button>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="section-header reveal">
+                <p class="section-tag">/skills</p>
+                <h2>Stack mình dùng</h2>
+                <p>Không cần tất cả mọi thứ, chỉ cần đủ sâu những thứ mình chọn.</p>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-card reveal">
+                    <p class="skill-title">Backend</p>
+                    <p class="skill-stack">C#, ASP.NET MVC/Core, Web API, Entity Framework Core, RESTful API, JWT Auth</p>
+                    <div class="skill-meter">
+                        <div style="--value: 80%"></div>
+                    </div>
+                </div>
+                <div class="skill-card reveal delay-1">
+                    <p class="skill-title">Mobile</p>
+                    <p class="skill-stack">Dart, Flutter, State management, Firebase, Bluetooth integration</p>
+                    <div class="skill-meter">
+                        <div style="--value: 78%"></div>
+                    </div>
+                </div>
+                <div class="skill-card reveal delay-2">
+                    <p class="skill-title">Database & Tools</p>
+                    <p class="skill-stack">SQL Server, MySQL, Firebase, Git, GitHub, Postman, SSMS, DBeaver</p>
+                    <div class="skill-meter">
+                        <div style="--value: 82%"></div>
+                    </div>
+                </div>
+                <div class="skill-card reveal delay-3">
+                    <p class="skill-title">IDE & Environment</p>
+                    <p class="skill-stack">Visual Studio, Android Studio, VS Code, WinForm, MVC Architecture</p>
+                    <div class="skill-meter">
+                        <div style="--value: 75%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card glass reveal certificates">
+                <h3>Certificates</h3>
+                <p class="section-tag" style="margin-top:6px;">/certificates</p>
+                <div class="cert-grid">
+                    <figure class="cert-item">
+                        <img src="assets/images/Networking%20Basics.png" alt="Networking Basics" data-caption="Networking Basics" />
+                        <a class="cert-download" href="assets/images/Networking%20Basics.png" download aria-label="Tải Networking Basics">⬇</a>
+                        <figcaption>Networking Basics</figcaption>
+                    </figure>
+                    <figure class="cert-item">
+                        <img src="assets/images/JavaScript%20Essentials%201.png" alt="JavaScript Essentials 1" data-caption="JavaScript Essentials 1" />
+                        <a class="cert-download" href="assets/images/JavaScript%20Essentials%201.png" download aria-label="Tải JavaScript Essentials 1">⬇</a>
+                        <figcaption>JavaScript Essentials 1</figcaption>
+                    </figure>
+                    <figure class="cert-item">
+                        <img src="assets/images/JavaScript%20Essentials%202.png" alt="JavaScript Essentials 2" data-caption="JavaScript Essentials 2" />
+                        <a class="cert-download" href="assets/images/JavaScript%20Essentials%202.png" download aria-label="Tải JavaScript Essentials 2">⬇</a>
+                        <figcaption>JavaScript Essentials 2</figcaption>
+                    </figure>
+                    <figure class="cert-item">
+                        <img src="assets/images/Gemini%20Certified%20Educator.png" alt="Gemini Certified Educator" data-caption="Gemini Certified Educator" />
+                        <a class="cert-download" href="assets/images/Gemini%20Certified%20Educator.png" download aria-label="Tải Gemini Certified Educator">⬇</a>
+                        <figcaption>Gemini Certified Educator</figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <!-- Lightbox modal for certificate preview -->
+            <div id="lightbox" class="lightbox" aria-hidden="true">
+                <button class="lightbox-close" aria-label="Đóng">×</button>
+                <div>
+                    <img src="" alt="" />
+                    <div class="lightbox-caption" aria-live="polite"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© <span id="year"></span> Nguyễn Trường Giang — Built with C#, Dart & a bit of caffeine.</p>
+    </footer>
+</body>
+
+</html>

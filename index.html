@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8" />
     <title>dev.giang — Blog & Portfolio</title>
@@ -13,6 +14,7 @@
         rel="stylesheet">
     <script defer src="script.js"></script>
 </head>
+
 <body>
     <!-- Background layers -->
     <div class="bg-gradient"></div>
@@ -24,12 +26,12 @@
             <div class="logo">dev.<span>giang</span></div>
         </div>
         <nav class="nav-links">
-            <a href="#hero">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#blog">Blog</a>
-            <a href="#contact">Contact</a>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="skills.html">Skills</a>
+            <a href="projects.html">Projects</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
         </nav>
         <button class="theme-toggle" id="themeToggle" aria-label="Đổi theme">
             <span class="theme-icon">☾</span>
@@ -41,30 +43,42 @@
         <section id="hero" class="section hero">
             <div class="hero-content reveal">
                 <p class="hero-tag">👋 Xin chào, mình là</p>
-                <h1 class="hero-title">
-                    Trường Giang
-                    <span class="hero-gradient">Developer</span>
-                </h1>
-                <p class="hero-subtitle">
-                    Code C# & Dart, thích vọc backend, mobile app, tối ưu performance
-                    và phá bug lúc 2 giờ sáng.
-                </p>
-                <div class="hero-actions">
-                    <a href="#projects" class="btn primary">Xem Projects</a>
-                    <a href="#blog" class="btn ghost">Đọc Blog</a>
+                <h1 class="hero-title">Nguyễn Trường Giang <span class="hero-gradient">Developer</span></h1>
+
+                <!-- Compact recruiter-focused subtitle -->
+                <p class="hero-subtitle">Intern Software Engineer @ HUTECH (2022-2026) — Full-stack development với C#, Flutter & ASP.NET Core. Hướng tới Senior Engineer với expertise về systems & cloud.</p>
+
+                <!-- Highlights (quick bullets for recruiters) -->
+                <div class="hero-highlights">
+                    <ul>
+                        <li>⚡ Full-stack: C#, Flutter, ASP.NET Core, SQL Server</li>
+                        <li>🏢 4 projects: Mobile, Web, Desktop, API</li>
+                        <li>📈 GPA 3.7/4.0 + Sinh viên tiểu biểu năm 2023, 2024, 2025</li>
+                    </ul>
                 </div>
-                <div class="hero-meta">
-                    <span>⚡ Full-stack vibes</span>
-                    <span>🧠 Clean Architecture</span>
-                    <span>🚀 Ship fast, break nothing</span>
+
+                <!-- CTAs: CV + Contact (prominent) -->
+                <div class="hero-actions">
+                    <a href="assets/NGUYEN TRUONG GIANG DEV CV VIE.pdf" download class="btn primary">Tải CV (PDF)</a>
+                    <a href="contact.html" class="btn ghost">Liên hệ / Hire</a>
+                </div>
+
+                <!-- Quick stats -->
+                <div class="hero-stats">
+                    <span><strong>HUTECH</strong> 2022-2026</span>
+                    <span><strong>4</strong> Internship Projects</span>
+                    <span><strong>C#, Flutter, .NET</strong></span>
                 </div>
             </div>
 
             <div class="hero-avatar reveal delay-1">
                 <div class="avatar-orbit">
-                    <div class="avatar-circle"></div>
+                    <div class="avatar-circle">
+                        <img src="assets/images/Avatar.jpg" alt="Illustration - Nguyễn Trường Giang" />
+                    </div>
                     <div class="avatar-glow"></div>
                 </div>
+
                 <div class="avatar-floating-card">
                     <p class="avatar-label">Now coding...</p>
                     <code class="avatar-code">
@@ -86,37 +100,40 @@
                 <div class="card glass reveal">
                     <h3>TL;DR</h3>
                     <p>
-                        Mình là developer tập trung vào <strong>.NET backend</strong> và
-                        <strong>Flutter mobile</strong>. Thích build những hệ thống
-                        có kiến trúc rõ ràng, log bài bản, dễ scale và dễ maintain.
+                        Sinh viên năm cuối HUTECH (2022-2026), đạt <strong>GPA 3.7/4.0</strong> và <strong>Sinh viên tiêu biểu</strong> năm 2023, 2024, 2025.
+                        Đam mê <strong>full-stack development</strong> với C#, Flutter &amp; ASP.NET Core.
                     </p>
                     <p>
-                        Khi không code thì mình đọc docs, xem benchmark, nghịch performance
-                        và refactor code cũ cho đỡ “mùi”.
+                        Dài hạn: trở thành Senior Software Engineer với expertise về systems, CI/CD, Docker và Cloud Computing.
+                        Hiện đã hoàn thành 4 dự án internship từ Mobile, Web, Desktop đến API development.
                     </p>
                 </div>
 
                 <div class="card glass timeline reveal delay-1">
-                    <h3>Timeline ngắn gọn</h3>
+                    <h3>Kinh nghiệm làm việc</h3>
                     <ul>
                         <li>
-                            <span class="time">2023 → nay</span>
+                            <span class="time">09/2025 - 11/2025</span>
                             <div>
-                                <strong>Full-stack dev</strong> — ASP.NET Core, Flutter, SQL Server,
-                                triển khai các hệ thống quản lý, app sinh viên, vv…
+                                <strong>Mobile App Developer (Flutter)</strong> — Training Management App
                             </div>
                         </li>
                         <li>
-                            <span class="time">2022</span>
+                            <span class="time">05/2025 - 07/2025</span>
                             <div>
-                                <strong>Bắt đầu với C# & Dart</strong> —
-                                từ “Hello World” đến clean architecture.
+                                <strong>Web Developer</strong> — SPACEGO E-Commerce Website (ASP.NET MVC)
                             </div>
                         </li>
                         <li>
-                            <span class="time">Trước nữa</span>
+                            <span class="time">08/2024 - 01/2025</span>
                             <div>
-                                Vọc vạch, cài lại Windows như cơm bữa, fix mạng, fix máy cho cả nhà.
+                                <strong>Mobile App Developer (Flutter)</strong> — Bluetooth Attendance System
+                            </div>
+                        </li>
+                        <li>
+                            <span class="time">01/2024 - 05/2024</span>
+                            <div>
+                                <strong>Desktop Developer</strong> — SPACEMARKET Sales Management System
                             </div>
                         </li>
                     </ul>
@@ -135,30 +152,30 @@
             <div class="skills-grid">
                 <div class="skill-card reveal">
                     <p class="skill-title">Backend</p>
-                    <p class="skill-stack">C#, ASP.NET Core, Web API, Entity Framework</p>
+                    <p class="skill-stack">C#, ASP.NET MVC/Core, Web API, Entity Framework Core, RESTful API, JWT Auth</p>
                     <div class="skill-meter">
-                        <div style="--value: 82%"></div>
+                        <div style="--value: 80%"></div>
                     </div>
                 </div>
                 <div class="skill-card reveal delay-1">
                     <p class="skill-title">Mobile</p>
-                    <p class="skill-stack">Dart, Flutter, REST API, Firebase</p>
+                    <p class="skill-stack">Dart, Flutter, State management, Firebase, Bluetooth integration</p>
                     <div class="skill-meter">
                         <div style="--value: 78%"></div>
                     </div>
                 </div>
                 <div class="skill-card reveal delay-2">
-                    <p class="skill-title">Database & Infra</p>
-                    <p class="skill-stack">SQL Server, Migrations, Cloudflare tunnel</p>
+                    <p class="skill-title">Database & Tools</p>
+                    <p class="skill-stack">SQL Server, MySQL, Firebase, Git, GitHub, Postman, SSMS, DBeaver</p>
                     <div class="skill-meter">
-                        <div style="--value: 75%"></div>
+                        <div style="--value: 82%"></div>
                     </div>
                 </div>
                 <div class="skill-card reveal delay-3">
-                    <p class="skill-title">Dev Vibes</p>
-                    <p class="skill-stack">Git, clean code, debug 3 giờ sáng</p>
+                    <p class="skill-title">IDE & Environment</p>
+                    <p class="skill-stack">Visual Studio, Android Studio, VS Code, WinForm, MVC Architecture</p>
                     <div class="skill-meter">
-                        <div style="--value: 90%"></div>
+                        <div style="--value: 75%"></div>
                     </div>
                 </div>
             </div>
@@ -172,50 +189,65 @@
                 <p>Một vài thứ mình đã build và khá tự hào.</p>
             </div>
 
-            <div class="grid three-columns">
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
                 <article class="card project-card reveal">
-                    <div class="project-badge">.NET</div>
-                    <h3>BlueSchool System</h3>
+                    <div class="project-badge">Sep - Nov 2025</div>
+                    <h3>Training Management App</h3>
                     <p>
-                        Hệ thống quản lý trường học: sinh viên, lớp học, lịch học, điểm, lịch thi.
-                        Backend ASP.NET Core, SQL Server, JWT auth.
-                    </p>
-                    <ul class="project-tags">
-                        <li>ASP.NET Core</li>
-                        <li>SQL Server</li>
-                        <li>JWT</li>
-                    </ul>
-                    <a href="#" class="project-link">Chi tiết sau nhé →</a>
-                </article>
-
-                <article class="card project-card reveal delay-1">
-                    <div class="project-badge">Flutter</div>
-                    <h3>BlueNet App</h3>
-                    <p>
-                        App mobile cho sinh viên: xem thời khóa biểu, điểm,
-                        điểm danh, nhận thông báo real-time.
+                        <strong>Mobile App Developer (Flutter)</strong> — Ứng dụng quản lý đào tạo cho sinh viên &amp; giảng viên.
+                        SQL Server backend, RESTful API, Flutter UI.
                     </p>
                     <ul class="project-tags">
                         <li>Flutter</li>
-                        <li>Dio</li>
-                        <li>Firebase</li>
+                        <li>SQL Server</li>
+                        <li>REST API</li>
                     </ul>
-                    <a href="#" class="project-link">Chi tiết sau nhé →</a>
+                    <a href="projects.html" class="project-link">Chi tiết →</a>
+                </article>
+
+                <article class="card project-card reveal delay-1">
+                    <div class="project-badge">May - Jul 2025</div>
+                    <h3>SPACEGO E-Commerce Website</h3>
+                    <p>
+                        <strong>Web Developer</strong> — Website bán thiết bị di động theo mô hình MVC.
+                        SQL Server database, ASP.NET backend, responsive design.
+                    </p>
+                    <ul class="project-tags">
+                        <li>ASP.NET MVC</li>
+                        <li>SQL Server</li>
+                        <li>E-Commerce</li>
+                    </ul>
+                    <a href="projects.html" class="project-link">Chi tiết →</a>
                 </article>
 
                 <article class="card project-card reveal delay-2">
-                    <div class="project-badge">Side project</div>
-                    <h3>Dev Tools & Experiments</h3>
+                    <div class="project-badge">Aug 2024 - Jan 2025</div>
+                    <h3>Bluetooth Attendance System</h3>
                     <p>
-                        Nơi mình thử nghiệm thêm: performance test, logging, CI/CD,
-                        refactor kiến trúc, playground thử ý tưởng mới.
+                        <strong>Mobile App Developer (Flutter)</strong> — Ứng dụng điểm danh sinh viên với công nghệ Bluetooth.
+                        Firebase backend, offline support, real-time synchronization.
                     </p>
                     <ul class="project-tags">
-                        <li>Experiments</li>
-                        <li>Performance</li>
-                        <li>Refactor</li>
+                        <li>Flutter</li>
+                        <li>Bluetooth</li>
+                        <li>Firebase</li>
                     </ul>
-                    <a href="#" class="project-link">Chi tiết sau nhé →</a>
+                    <a href="projects.html" class="project-link">Chi tiết →</a>
+                </article>
+
+                <article class="card project-card reveal delay-3">
+                    <div class="project-badge">Jan - May 2024</div>
+                    <h3>SPACEMARKET Sales Management System</h3>
+                    <p>
+                        <strong>Desktop Developer</strong> — Phần mềm quản lý bán hàng với giao diện WinForm.
+                        Microsoft SQL Server backend, inventory management, sales reports.
+                    </p>
+                    <ul class="project-tags">
+                        <li>C# WinForm</li>
+                        <li>SQL Server</li>
+                        <li>Desktop App</li>
+                    </ul>
+                    <a href="projects.html" class="project-link">Chi tiết →</a>
                 </article>
             </div>
         </section>
@@ -236,7 +268,7 @@
                         Từ naming, DTO, validation, middleware cho đến logging và
                         cấu trúc folder. Những thứ mình rút ra sau vài lần phá project.
                     </p>
-                    <a href="#" class="blog-link">Đọc sau (chưa viết thiệt) →</a>
+                    <a href="posts/post-01-api-dotnet.html" class="blog-link">Đọc →</a>
                 </article>
 
                 <article class="card blog-card reveal delay-1">
@@ -246,7 +278,7 @@
                         Làm sao để app Flutter gọi API mượt, handle timeout, 401/403,
                         show dialog gọn gàng & log đủ dữ kiện để debug.
                     </p>
-                    <a href="#" class="blog-link">Đọc sau →</a>
+                    <a href="posts/post-02-dio-error-handling.html" class="blog-link">Đọc →</a>
                 </article>
 
                 <article class="card blog-card reveal delay-2">
@@ -255,7 +287,7 @@
                     <p>
                         Mấy khoảnh khắc fix xong bug mà tự nhiên thấy cuộc đời có ý nghĩa lại.
                     </p>
-                    <a href="#" class="blog-link">Đọc sau →</a>
+                    <a href="posts/post-03-dev-life-debug.html" class="blog-link">Đọc →</a>
                 </article>
             </div>
         </section>
@@ -274,35 +306,53 @@
                     <ul class="contact-list">
                         <li>
                             <span class="contact-label">Email</span>
-                            <span class="contact-value">youremail@example.com</span>
+                            <span class="contact-value">giangliken@gmail.com</span>
+                        </li>
+                        <li>
+                            <span class="contact-label">Phone</span>
+                            <span class="contact-value">0367509647</span>
                         </li>
                         <li>
                             <span class="contact-label">GitHub</span>
-                            <span class="contact-value">@yourgithub</span>
+                            <span class="contact-value">github.com/giangliken</span>
                         </li>
                         <li>
-                            <span class="contact-label">LinkedIn</span>
-                            <span class="contact-value">/in/your-link</span>
+                            <span class="contact-label">Address</span>
+                            <span class="contact-value">Khu Phố 9, Phường Linh Xuân, TP.HCM</span>
                         </li>
                     </ul>
+
+                    <div class="social-links">
+                        <a class="facebook" href="https://facebook.com/giangliken" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M22 12C22 6.48 17.52 2 12 2S2 6.48 2 12c0 4.84 3.44 8.84 8 9.8v-6.93H8.5v-2.87H10V9.5c0-1.5.9-2.33 2.28-2.33.66 0 1.35.12 1.35.12v1.5h-.77c-.76 0-1 .48-1 0v-1h1.7l-.27 2.43h-1.43V21.8c4.56-.96 8-4.96 8-9.8z"/></svg>
+                        </a>
+
+                        <a class="github" href="https://github.com/giangliken" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.16 6.84 9.49.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.6-3.37-1.34-3.37-1.34-.45-1.14-1.11-1.44-1.11-1.44-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.54 2.36 1.1 2.94.84.09-.65.35-1.1.63-1.35-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.8c.85.004 1.71.115 2.51.34 1.9-1.29 2.73-1.02 2.73-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85 0 1.33-.01 2.4-.01 2.73 0 .26.18.58.69.48A10.02 10.02 0 0022 12c0-5.52-4.48-10-10-10z"/></svg>
+                        </a>
+
+                        <a class="linkedin" href="https://www.linkedin.com/in/nguyen-truong-giang/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M19 3A2 2 0 0 1 21 5v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zm-11 7H6v7h2v-7zM7 7.75a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM18 10.5c0-1.38-.5-2.32-1.75-2.32-1 0-1.44.67-1.69 1.14V10.5h-2v7h2v-3.75c0-.99.19-1.73 1.25-1.73 1.06 0 1.06 1.02 1.06 1.8V17.5h2v-7z"/></svg>
+                        </a>
+                    </div>
                 </div>
 
-                <form class="card glass contact-form reveal delay-1">
-                    <h3>Leave a message</h3>
+                <form class="card glass contact-form reveal delay-1" action="https://formspree.io/f/mgowgnzw" method="POST">
+                    <h3>Để lại tin nhắn</h3>
                     <div class="form-group">
                         <label for="name">Tên</label>
-                        <input id="name" type="text" placeholder="Cho mình biết gọi bạn là gì" />
+                        <input id="name" type="text" name="name" placeholder="Cho mình biết gọi bạn là gì" required />
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input id="email" type="email" placeholder="Để mình tiện trả lời" />
+                        <input id="email" type="email" name="email" placeholder="Để mình tiện trả lời" required />
                     </div>
                     <div class="form-group">
                         <label for="message">Nội dung</label>
-                        <textarea id="message" rows="4" placeholder="Gửi lời nhắn cho mình..."></textarea>
+                        <textarea id="message" name="message" rows="4" placeholder="Gửi lời nhắn cho mình..." required></textarea>
                     </div>
-                    <button type="button" class="btn primary full-width">
-                        Gửi (demo thôi, chưa gửi thật)
+                    <button type="submit" class="btn primary full-width">
+                        Gửi tin nhắn
                     </button>
                 </form>
             </div>
@@ -310,7 +360,8 @@
     </main>
 
     <footer class="footer">
-        <p>© <span id="year"></span> dev.giang — Built with C#, Dart & a bit of caffeine.</p>
+        <p>© <span id="year"></span> Nguyễn Trường Giang — Built with C#, Dart & a bit of caffeine.</p>
     </footer>
 </body>
+
 </html>

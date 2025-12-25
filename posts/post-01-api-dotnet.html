@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Viết API .NET sao cho “ngon” — dev.giang</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <script defer src="/script.js"></script>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="nav-left">
+            <div class="logo">dev.<span>giang</span></div>
+        </div>
+        <nav class="nav-links">
+            <a href="/index.html">Home</a>
+            <a href="/about.html">About</a>
+            <a href="/skills.html">Skills</a>
+            <a href="/projects.html">Projects</a>
+            <a href="/blog.html">Blog</a>
+            <a href="/contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main class="section">
+        <div class="section-header">
+            <p class="section-tag">/blog</p>
+            <h2>Viết API .NET sao cho “ngon”, đỡ muốn refactor lại</h2>
+            <p>Thực hành, cấu trúc và một số nguyên tắc giúp API .NET dễ bảo trì.</p>
+        </div>
+
+        <article class="card">
+            <p><strong>Tóm tắt:</strong> Bài viết này đi sâu vào các quyết định kiến trúc và thực hành tốt cho việc xây dựng API bằng .NET (ASP.NET Core). Mục tiêu: tạo API dễ bảo trì, dễ mở rộng, có observability tốt và ít breaking changes khi phát triển thực tế.</p>
+
+            <h3>Thiết kế kiến trúc</h3>
+            <p>Bắt đầu với phân tầng rõ ràng: Controller → Application/Service layer → Domain → Repository. Controller chỉ mapping request/response và orchestration sơ bộ; business logic phải nằm trong service để dễ test. Repository (hoặc repository pattern/lightweight DAO) chịu trách nhiệm truy xuất dữ liệu. Khi cần, tách phần DTO mapping bằng AutoMapper để giữ controller gọn.</p>
+
+            <h3>Contract: DTO & Versioning</h3>
+            <p>Sử dụng DTO để tách contract API với domain model nội bộ. Khi cập nhật API, áp dụng versioning (URL versioning: /api/v1/..., hoặc header-based). Nguyên tắc: prefer additive changes (thêm field) hơn là sửa/loại bỏ. Nếu bắt buộc breaking change, cung cấp parallel version hoặc migration guide.</p>
+
+            <h3>Validation & Centralized Error Handling</h3>
+            <p>Dùng FluentValidation hoặc DataAnnotations cho validation input; validate sớm trong pipeline. Dùng global exception middleware để map exception sang response chuẩn (status code, error code, message). Trả lỗi có cấu trúc giúp client và SDK xử lý tự động.</p>
+
+            <h3>Security & Auth</h3>
+            <p>Thiết lập authentication/authorization tách biệt (JWT, OAuth). Thiết kế các policy role-based và claim-based. Never trust client input; sanitize và kiểm tra permission ở service layer nơi có business context.</p>
+
+            <h3>Logging, Tracing & Observability</h3>
+            <p>Sử dụng structured logging (Serilog) với correlationId (tạo middleware gán request id). Export logs tới sink tập trung (Seq, ELK, Azure Monitor). Bổ sung tracing (OpenTelemetry) để theo dõi request flow giữa microservices. Instrument metrics (request latency, error rate) để cảnh báo sớm.</p>
+
+            <h3>Resilience & Performance</h3>
+            <p>Áp dụng retry/backoff cho gọi dịch vụ bên ngoài (Polly). Caching ở tầng hợp lý (response caching, in-memory, Redis). Giới hạn payload và pagination cho endpoints trả nhiều dữ liệu.</p>
+
+            <h3>Testing Strategy</h3>
+            <p>Unit test cho service logic (mock repository). Integration test cho controller với in-memory DB (SQLite in-memory hoặc Testcontainers). Contract tests để đảm bảo backward compatibility với client nếu có SDK.</p>
+
+            <h3>CI/CD & Release</h3>
+            <p>Pipeline nên build, chạy test, lint, tạo artifact và deploy tới staging trước khi production. Canary/blue-green deployment giúp giảm rủi ro khi release các thay đổi backend lớn.</p>
+
+            <h3>Kết luận</h3>
+            <p>API chất lượng là kết quả của nhiều quyết định nhỏ: clear separation of concerns, stable contract, good observability và test coverage. Đầu tư thời gian vào thiết kế và pipeline sẽ giảm chi phí bảo trì lâu dài.</p>
+
+            <p><a href="/blog.html" class="project-link">← Quay về Blog</a></p>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <p>© <span id="year"></span> Nguyễn Trường Giang</p>
+    </footer>
+</body>
+
+</html>

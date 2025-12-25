@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Blog — dev.giang</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <div class="bg-gradient"></div>
+    <div class="bg-noise"></div>
+
+    <header class="navbar">
+        <div class="nav-left">
+            <div class="logo">dev.<span>giang</span></div>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="skills.html">Skills</a>
+            <a href="projects.html">Projects</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <button class="theme-toggle" id="themeToggle" aria-label="Đổi theme">
+            <span class="theme-icon">☾</span>
+        </button>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="section-header reveal">
+                <p class="section-tag">/blog</p>
+                <h2>Blog & note linh tinh</h2>
+                <p>Nơi mình viết lại những gì học được để khỏi quên.</p>
+            </div>
+
+            <div class="blog-list">
+                <article class="card blog-card reveal">
+                    <p class="blog-meta">#01 • Backend • 10 phút đọc</p>
+                    <h3>Viết API .NET sao cho “ngon”, đỡ muốn refactor lại</h3>
+                    <p>Thực hành tốt về DTO, validation, middleware, logging và cấu trúc folder giúp API dễ duy trì và mở rộng.</p>
+                    <a href="posts/post-01-api-dotnet.html" class="blog-link">Đọc →</a>
+                </article>
+
+                <article class="card blog-card reveal delay-1">
+                    <p class="blog-meta">#02 • Flutter • 8 phút đọc</p>
+                    <h3>Dio, error handling & cách mình show lỗi cho user</h3>
+                    <p>Mẹo dùng Dio, retry, timeout và hiển thị lỗi thân thiện mà vẫn giữ log để debug.</p>
+                    <a href="posts/post-02-dio-error-handling.html" class="blog-link">Đọc →</a>
+                </article>
+
+                <article class="card blog-card reveal delay-2">
+                    <p class="blog-meta">#03 • Dev life • 5 phút đọc</p>
+                    <h3>Chuyện 2 giờ sáng debug và cảm giác “à hoá ra là vậy”</h3>
+                    <p>Góc nhìn cá nhân về khoảnh khắc tìm ra bug, cách giữ bình tĩnh và bài học rút ra.</p>
+                    <a href="posts/post-03-dev-life-debug.html" class="blog-link">Đọc →</a>
+                </article>
+
+                <article class="card blog-card reveal delay-1">
+                    <p class="blog-meta">#04 • Database • 7 phút đọc</p>
+                    <h3>Tối ưu truy vấn SQL Server: những case hay gặp</h3>
+                    <p>Index, execution plan và cách tránh những trap phổ biến khiến query chậm.</p>
+                    <a href="posts/post-04-sqlserver-optimizations.html" class="blog-link">Đọc →</a>
+                </article>
+
+                <article class="card blog-card reveal delay-2">
+                    <p class="blog-meta">#05 • Mobile • 6 phút đọc</p>
+                    <h3>Thiết kế offline-first cho app sinh viên</h3>
+                    <p>Chiến lược lưu cache, reconcile và UX khi mạng yếu — kinh nghiệm từ dự án điểm danh.</p>
+                    <a href="posts/post-05-offline-first.html" class="blog-link">Đọc →</a>
+                </article>
+
+                <article class="card blog-card reveal delay-3">
+                    <p class="blog-meta">#06 • DevOps • 8 phút đọc</p>
+                    <h3>CI/CD cơ bản cho .NET & Flutter</h3>
+                    <p>Pipeline đơn giản, build cache, test và deploy tự động giúp tiết kiệm thời gian release.</p>
+                    <a href="posts/post-06-ci-cd-dotnet-flutter.html" class="blog-link">Đọc →</a>
+                </article>
+
+                <article class="card blog-card reveal delay-1">
+                    <p class="blog-meta">#07 • Tools • 6 phút đọc</p>
+                    <h3>Debug hiệu quả: log, breakpoint và replay</h3>
+                    <p>Cách cấu trúc log hữu ích, sử dụng breakpoint conditional và ghi lại bước reproduction nhanh.</p>
+                    <a href="posts/post-07-debug-logs.html" class="blog-link">Đọc →</a>
+                </article>
+
+                <article class="card blog-card reveal delay-2">
+                    <p class="blog-meta">#08 • Testing • 7 phút đọc</p>
+                    <h3>Unit & Integration test cho dự án học thuật</h3>
+                    <p>Viết test có thể maintain: mock, fixture và test dữ liệu thực tế cho backend và app.</p>
+                    <a href="posts/post-08-testing.html" class="blog-link">Đọc →</a>
+                </article>
+
+                <article class="card blog-card reveal delay-3">
+                    <p class="blog-meta">#09 • Productivity • 4 phút đọc</p>
+                    <h3>Thói quen dev giúp mình lên deadline mà vẫn giữ sanity</h3>
+                    <p>Quản lý task, chunking công việc và tips giảm stress khi project tight.</p>
+                    <a href="posts/post-09-productivity.html" class="blog-link">Đọc →</a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© <span id="year"></span> Nguyễn Trường Giang — Built with C#, Dart & a bit of caffeine.</p>
+    </footer>
+</body>
+
+</html>
