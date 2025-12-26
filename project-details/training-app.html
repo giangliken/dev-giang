@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <title>Training Management App — Projects — dev.giang</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    <script defer src="../script.js"></script>
+</head>
+<body>
+    <div class="bg-gradient"></div>
+    <div class="bg-noise"></div>
+
+    <header class="navbar">
+        <div class="nav-left">
+            <div class="logo">dev.<span>giang</span></div>
+        </div>
+        <nav class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="../about.html">About</a>
+            <a href="../skills.html">Skills</a>
+            <a href="../projects.html">Projects</a>
+            <a href="../blog.html">Blog</a>
+            <a href="../contact.html">Contact</a>
+        </nav>
+        <button class="theme-toggle" id="themeToggle" aria-label="Đổi theme">
+            <span class="theme-icon">☾</span>
+        </button>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="section-header reveal">
+                <p class="section-tag">/projects</p>
+                <h2>Training Management App</h2>
+                <p><strong>Vai trò:</strong> Mobile App Developer (Flutter). Xây dựng app quản lý khoá học, đăng ký, lịch học và thông báo cho sinh viên và giảng viên.</p>
+            </div>
+
+            <img src="../assets/images/Training Management App.png" alt="Demo image for Training Management App" class="project-demo-image reveal delay-1">
+
+            <div class="card glass reveal">
+                <h3>Chi tiết dự án</h3>
+                <p><strong>Nhiệm vụ chính:</strong></p>
+                <ul>
+                    <li>Thiết kế UI/UX responsive bằng Flutter, tối ưu trải nghiệm trên Android.</li>
+                    <li>Triển khai mô-đun đăng ký khóa, lịch biểu và thông báo real-time.</li>
+                    <li>Tích hợp RESTful API với backend SQL Server; đảm bảo retry và offline cache khi mất kết nối.</li>
+                </ul>
+
+                <p><strong>Công nghệ:</strong> Flutter, Dart, REST API, SQL Server, Provider (state management), Dio.</p>
+
+                <p><strong>Kết quả & chỉ số:</strong> Ứng dụng hỗ trợ >500 người dùng thử, giảm thời gian xử lý đăng ký trung bình từ 24h → 30 phút ở môi trường thử nghiệm; off-line sync hoạt động ổn định trên 95% trường hợp mất kết nối tạm thời.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© <span id="year"></span> Nguyễn Trường Giang — Built with C#, Dart & a bit of caffeine.</p>
+    </footer>
+</body>
+</html>

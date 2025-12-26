@@ -12,6 +12,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <script defer src="script.js"></script>
 </head>
 
@@ -91,7 +92,7 @@
         <!-- About -->
         <section id="about" class="section">
             <div class="section-header reveal">
-                <p class="section-tag">/about</p>
+                <p class="section-tag"><a href="about.html">/about</a></p>
                 <h2>Về mình</h2>
                 <p>Đôi dòng tâm sự của một thằng dev mê code hơn mê ngủ.</p>
             </div>
@@ -144,7 +145,7 @@
         <!-- Skills -->
         <section id="skills" class="section">
             <div class="section-header reveal">
-                <p class="section-tag">/skills</p>
+                <p class="section-tag"><a href="skills.html">/skills</a></p>
                 <h2>Stack mình dùng</h2>
                 <p>Không cần tất cả mọi thứ, chỉ cần đủ sâu những thứ mình chọn.</p>
             </div>
@@ -152,31 +153,40 @@
             <div class="skills-grid">
                 <div class="skill-card reveal">
                     <p class="skill-title">Backend</p>
-                    <p class="skill-stack">C#, ASP.NET MVC/Core, Web API, Entity Framework Core, RESTful API, JWT Auth</p>
-                    <div class="skill-meter">
-                        <div style="--value: 80%"></div>
+                    <div class="skill-icons">
+                        <i class="devicon-csharp-plain-wordmark"></i>
+                        <i class="devicon-dotnetcore-plain"></i>
+                        <i class="devicon-dot-net-plain-wordmark"></i>
                     </div>
                 </div>
                 <div class="skill-card reveal delay-1">
                     <p class="skill-title">Mobile</p>
-                    <p class="skill-stack">Dart, Flutter, State management, Firebase, Bluetooth integration</p>
-                    <div class="skill-meter">
-                        <div style="--value: 78%"></div>
+                    <div class="skill-icons">
+                        <i class="devicon-dart-plain-wordmark"></i>
+                        <i class="devicon-flutter-plain"></i>
+                        <i class="devicon-firebase-plain-wordmark"></i>
                     </div>
                 </div>
                 <div class="skill-card reveal delay-2">
                     <p class="skill-title">Database & Tools</p>
-                    <p class="skill-stack">SQL Server, MySQL, Firebase, Git, GitHub, Postman, SSMS, DBeaver</p>
-                    <div class="skill-meter">
-                        <div style="--value: 82%"></div>
+                    <div class="skill-icons">
+                        <i class="devicon-microsoftsqlserver-plain-wordmark"></i>
+                        <i class="devicon-mysql-plain-wordmark"></i>
+                        <i class="devicon-firebase-plain-wordmark"></i>
+                        <i class="devicon-git-plain-wordmark"></i>
+                        <i class="devicon-github-original-wordmark"></i>
+                        <i class="devicon-postman-plain-wordmark"></i>
                     </div>
+                    
                 </div>
                 <div class="skill-card reveal delay-3">
                     <p class="skill-title">IDE & Environment</p>
-                    <p class="skill-stack">Visual Studio, Android Studio, VS Code, WinForm, MVC Architecture</p>
-                    <div class="skill-meter">
-                        <div style="--value: 75%"></div>
+                    <div class="skill-icons">
+                        <i class="devicon-visualstudio-plain-wordmark"></i>
+                        <i class="devicon-androidstudio-plain-wordmark"></i>
+                        <i class="devicon-vscode-plain-wordmark"></i>
                     </div>
+                    
                 </div>
             </div>
         </section>
@@ -184,13 +194,14 @@
         <!-- Projects -->
         <section id="projects" class="section">
             <div class="section-header reveal">
-                <p class="section-tag">/projects</p>
+                <p class="section-tag"><a href="projects.html">/projects</a></p>
                 <h2>Projects nổi bật</h2>
                 <p>Một vài thứ mình đã build và khá tự hào.</p>
             </div>
 
             <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
                 <article class="card project-card reveal">
+                    <img src="assets/images/Training Management App.png" alt="Training Management App" class="project-image">
                     <div class="project-badge">Sep - Nov 2025</div>
                     <h3>Training Management App</h3>
                     <p>
@@ -206,6 +217,7 @@
                 </article>
 
                 <article class="card project-card reveal delay-1">
+                    <img src="assets/images/SPACEGO E-Commerce Website.png" alt="SPACEGO E-Commerce Website" class="project-image">
                     <div class="project-badge">May - Jul 2025</div>
                     <h3>SPACEGO E-Commerce Website</h3>
                     <p>
@@ -221,6 +233,7 @@
                 </article>
 
                 <article class="card project-card reveal delay-2">
+                    <img src="assets/images/Bluetooth Attendance System.png" alt="Bluetooth Attendance System" class="project-image">
                     <div class="project-badge">Aug 2024 - Jan 2025</div>
                     <h3>Bluetooth Attendance System</h3>
                     <p>
@@ -236,6 +249,7 @@
                 </article>
 
                 <article class="card project-card reveal delay-3">
+                    <img src="assets/images/SPACEMARKET Sales Management System.png" alt="SPACEMARKET Sales Management System" class="project-image">
                     <div class="project-badge">Jan - May 2024</div>
                     <h3>SPACEMARKET Sales Management System</h3>
                     <p>
@@ -255,39 +269,37 @@
         <!-- Blog -->
         <section id="blog" class="section">
             <div class="section-header reveal">
-                <p class="section-tag">/blog</p>
+                <p class="section-tag"><a href="blog.html">/blog</a></p>
                 <h2>Blog & note linh tinh</h2>
                 <p>Nơi mình viết lại những gì học được để khỏi quên.</p>
             </div>
 
             <div class="blog-list">
                 <article class="card blog-card reveal">
-                    <p class="blog-meta">#01 • Backend • 10 phút đọc</p>
-                    <h3>Viết API .NET sao cho “ngon”, đỡ muốn refactor lại</h3>
+                    <p class="blog-meta">#01 • JavaScript • 7 phút đọc</p>
+                    <h3>Hiểu Sâu về `this` trong JavaScript</h3>
                     <p>
-                        Từ naming, DTO, validation, middleware cho đến logging và
-                        cấu trúc folder. Những thứ mình rút ra sau vài lần phá project.
+                        Khám phá cách từ khóa `this` hoạt động trong các ngữ cảnh khác nhau của JavaScript, từ global scope đến arrow functions.
                     </p>
-                    <a href="posts/post-01-api-dotnet.html" class="blog-link">Đọc →</a>
+                    <a href="posts/post-01-javascript-this.html" class="blog-link">Đọc →</a>
                 </article>
 
                 <article class="card blog-card reveal delay-1">
-                    <p class="blog-meta">#02 • Flutter • 8 phút đọc</p>
-                    <h3>Dio, error handling & cách mình show lỗi cho user</h3>
+                    <p class="blog-meta">#02 • JavaScript • 8 phút đọc</p>
+                    <h3>Debounce và Throttle: Tối ưu Performance</h3>
                     <p>
-                        Làm sao để app Flutter gọi API mượt, handle timeout, 401/403,
-                        show dialog gọn gàng & log đủ dữ kiện để debug.
+                        Kiểm soát tần suất thực thi hàm để cải thiện hiệu năng ứng dụng.
                     </p>
-                    <a href="posts/post-02-dio-error-handling.html" class="blog-link">Đọc →</a>
+                    <a href="posts/post-02-debounce-throttle.html" class="blog-link">Đọc →</a>
                 </article>
 
                 <article class="card blog-card reveal delay-2">
-                    <p class="blog-meta">#03 • Dev life</p>
-                    <h3>Chuyện 2 giờ sáng debug và cảm giác “à hoá ra là vậy”</h3>
+                    <p class="blog-meta">#03 • JavaScript • 9 phút đọc</p>
+                    <h3>Sử dụng `Map`, `Filter`, `Reduce` hiệu quả</h3>
                     <p>
-                        Mấy khoảnh khắc fix xong bug mà tự nhiên thấy cuộc đời có ý nghĩa lại.
+                        Làm chủ các phương thức mảng để viết code ngắn gọn và dễ hiểu.
                     </p>
-                    <a href="posts/post-03-dev-life-debug.html" class="blog-link">Đọc →</a>
+                    <a href="posts/post-03-map-filter-reduce.html" class="blog-link">Đọc →</a>
                 </article>
             </div>
         </section>
@@ -295,7 +307,7 @@
         <!-- Contact -->
         <section id="contact" class="section">
             <div class="section-header reveal">
-                <p class="section-tag">/contact</p>
+                <p class="section-tag"><a href="contact.html">/contact</a></p>
                 <h2>Liên hệ</h2>
                 <p>Có job, project thú vị hoặc muốn tám chuyện dev? Nhắn mình.</p>
             </div>

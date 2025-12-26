@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Hiểu Sâu về `this` trong JavaScript — Blog — dev.giang</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Khám phá cách từ khóa `this` hoạt động trong các ngữ cảnh khác nhau của JavaScript, từ global scope đến arrow functions." />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    <script defer src="../script.js"></script>
+</head>
+
+<body>
+    <div class="bg-gradient"></div>
+    <div class="bg-noise"></div>
+
+    <header class="navbar">
+        <div class="nav-left">
+            <div class="logo">dev.<span>giang</span></div>
+        </div>
+        <nav class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="../about.html">About</a>
+            <a href="../skills.html">Skills</a>
+            <a href="../projects.html">Projects</a>
+            <a href="../blog.html">Blog</a>
+            <a href="../contact.html">Contact</a>
+        </nav>
+        <button class="theme-toggle" id="themeToggle" aria-label="Đổi theme">
+            <span class="theme-icon">☾</span>
+        </button>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="section-header reveal">
+                <p class="section-tag">/javascript</p>
+                <h2>Hiểu Sâu về `this` trong JavaScript</h2>
+                <p>Khám phá cách từ khóa <code>this</code> hoạt động trong các ngữ cảnh khác nhau.</p>
+            </div>
+
+            <article class="card glass post-content reveal">
+                <p>Từ khóa <code>this</code> trong JavaScript là một trong những khái niệm dễ gây nhầm lẫn nhất. Giá trị của <code>this</code> được xác định bởi cách một hàm được gọi (ngữ cảnh thực thi). Dưới đây là các quy tắc chính.</p>
+
+                <h3>1. Global Scope</h3>
+                <p>Trong ngữ cảnh toàn cục (global scope), <code>this</code> tham chiếu đến đối tượng global, là <code>window</code> trong trình duyệt.</p>
+                <pre><code class="language-javascript">console.log(this === window); // true</code></pre>
+
+                <h3>2. Function Context</h3>
+                <p>Bên trong một hàm thông thường, <code>this</code> cũng tham chiếu đến đối tượng global. Tuy nhiên, trong 'strict mode', giá trị của <code>this</code> sẽ là <code>undefined</code>.</p>
+                <pre><code class="language-javascript">function showThis() {
+  'use strict';
+  console.log(this); // undefined
+}
+showThis();</code></pre>
+
+                <h3>3. Method Context</h3>
+                <p>Khi một hàm được gọi như một phương thức của một đối tượng, <code>this</code> sẽ tham chiếu đến chính đối tượng đó.</p>
+                <pre><code class="language-javascript">const person = {
+  name: 'Giang',
+  greet: function() {
+    console.log(`Hello, my name is ${this.name}`);
+  }
+};
+
+person.greet(); // "Hello, my name is Giang"</code></pre>
+                
+                <h3>4. Arrow Functions</h3>
+                <p>Arrow functions không có ngữ cảnh <code>this</code> của riêng nó. Thay vào đó, nó kế thừa <code>this</code> từ ngữ cảnh (lexical scope) mà nó được định nghĩa.</p>
+                <pre><code class="language-javascript">const developer = {
+  name: 'Dev Giang',
+  skills: ['JS', 'C#', 'Flutter'],
+  showSkills: function() {
+    this.skills.forEach(skill => {
+      // `this` ở đây là `developer` object
+      console.log(`${this.name} knows ${skill}`);
+    });
+  }
+};
+
+developer.showSkills();</code></pre>
+                <p>Đây là một ưu điểm lớn khi làm việc với các callback hoặc hàm lồng nhau, giúp tránh việc phải dùng <code>.bind(this)</code> hoặc <code>const self = this;</code>.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© <span id="year"></span> Nguyễn Trường Giang — Built with C#, Dart & a bit of caffeine.</p>
+    </footer>
+</body>
+</html>

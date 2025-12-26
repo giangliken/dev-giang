@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <title>SPACEMARKET Sales Management System — Projects — dev.giang</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    <script defer src="../script.js"></script>
+</head>
+<body>
+    <div class="bg-gradient"></div>
+    <div class="bg-noise"></div>
+
+    <header class="navbar">
+        <div class="nav-left">
+            <div class="logo">dev.<span>giang</span></div>
+        </div>
+        <nav class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="../about.html">About</a>
+            <a href="../skills.html">Skills</a>
+            <a href="../projects.html">Projects</a>
+            <a href="../blog.html">Blog</a>
+            <a href="../contact.html">Contact</a>
+        </nav>
+        <button class="theme-toggle" id="themeToggle" aria-label="Đổi theme">
+            <span class="theme-icon">☾</span>
+        </button>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="section-header reveal">
+                <p class="section-tag">/projects</p>
+                <h2>SPACEMARKET Sales Management System</h2>
+                <p><strong>Vai trò:</strong> Desktop Developer (C# WinForm). Xây dựng ứng dụng quản lý bán hàng, tồn kho và báo cáo doanh thu cho chuỗi bán lẻ.</p>
+            </div>
+
+            <img src="../assets/images/SPACEMARKET Sales Management System.png" alt="Demo image for SPACEMARKET Sales Management System" class="project-demo-image reveal delay-1">
+
+            <div class="card glass reveal">
+                <h3>Chi tiết dự án</h3>
+                <p><strong>Nhiệm vụ chính:</strong></p>
+                <ul>
+                    <li>Phát triển module quản lý sản phẩm, tồn kho và nhập/xuất kho.</li>
+                    <li>Thiết kế báo cáo doanh thu theo ngày/tháng; export sang Excel để kiểm toán.</li>
+                    <li>Thiết lập kết nối và backup dữ liệu trên SQL Server, tối ưu query báo cáo nặng.</li>
+                </ul>
+
+                <p><strong>Công nghệ:</strong> C#, WinForms, Microsoft SQL Server, Dapper/ADO.NET.</p>
+
+                <p><strong>Kết quả & chỉ số:</strong> Hệ thống triển khai thử nghiệm tại 2 cửa hàng; thời gian truy vấn báo cáo giảm 60% sau tối ưu; giúp nhân viên giao dịch nhanh hơn, giảm lỗi nhập liệu.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© <span id="year"></span> Nguyễn Trường Giang — Built with C#, Dart & a bit of caffeine.</p>
+    </footer>
+</body>
+</html>
