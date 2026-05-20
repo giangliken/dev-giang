@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>BlueSchoolSystem — Projects — dev.giang</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <script defer src="../script.js"></script>
+</head>
+
+<body>
+    <div class="bg-gradient"></div>
+    <div class="bg-noise"></div>
+
+    <header class="navbar">
+        <div class="nav-left">
+            <div class="logo">dev.<span>giang</span></div>
+        </div>
+        <nav class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="../about.html">About</a>
+            <a href="../skills.html">Skills</a>
+            <a href="../projects.html">Projects</a>
+            <a href="../contact.html">Contact</a>
+        </nav>
+        <button class="theme-toggle" id="themeToggle" aria-label="Đổi theme">
+            <span class="theme-icon">☾</span>
+        </button>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="section-header reveal">
+                <p class="section-tag">/projects</p>
+                <h2>Hệ thống quản lý đào tạo BlueSchoolSystem</h2>
+            </div>
+
+            <img src="../assets/images/Training Management App.png" alt="BlueSchoolSystem"
+                class="project-demo-image reveal delay-1">
+
+            <div class="card glass reveal">
+                <h3>Chi tiết dự án</h3>
+                <p><strong>Vai trò:</strong> Trưởng nhóm</p>
+                <p>Dẫn dắt đội ngũ xây dựng hệ sinh thái quản lý đào tạo đa nền tảng bao gồm Web Admin và Mobile App.
+                    Điểm nổi bật là tích hợp AI nhận diện khuôn mặt để chống gian lận điểm danh. Đồ án xuất sắc đạt điểm
+                    tuyệt đối 10/10.</p>
+                <p><strong>Nhiệm vụ chính:</strong></p>
+                <ul>
+                    <li>Lên kế hoạch kiến trúc hệ thống và phân công công việc trong nhóm.</li>
+                    <li>Phát triển Web Admin quản lý lớp học, sinh viên, giảng viên và lịch dạy.</li>
+                    <li>Tích hợp module AI nhận diện khuôn mặt (<code>face-recognition</code>) vào quy trình điểm danh
+                        để ngăn chặn gian lận.</li>
+                    <li>Xây dựng Mobile App (Flutter) kết nối với backend qua RESTful API.</li>
+                    <li>Thiết kế và tối ưu schema cơ sở dữ liệu SQL Server cho toàn hệ thống.</li>
+                </ul>
+
+                <p><strong>Công nghệ:</strong> ASP.NET Core, Flutter, Dart, SQL Server, Python (face-recognition),
+                    RESTful API, Entity Framework Core.</p>
+
+                <p><strong>Kết quả & chỉ số:</strong> Đồ án đạt điểm tuyệt đối 10/10; hệ thống AI chống gian lận hoạt
+                    động ổn định với độ chính xác nhận diện cao trong môi trường thử nghiệm thực tế.</p>
+                <div class="project-actions" style="text-align: right; margin-top: 2rem;">
+                    <a href="https://github.com/giangliken/BlueSchoolSystem" target="_blank" rel="noopener noreferrer"
+                        class="btn primary"><i class="devicon-github-original"></i> Xem trên GitHub</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© <span id="year"></span> Nguyễn Trường Giang — Built with C#, Dart & a bit of caffeine.</p>
+    </footer>
+</body>
+
+</html>
