@@ -41,13 +41,12 @@ function applyTheme(isLight) {
 }
 
 if (themeToggle) {
-    // initialize: prefer saved choice, otherwise follow OS preference
+    // initialize: prefer saved choice, otherwise default to light theme
     const saved = localStorage.getItem('site-theme');
-    if (saved === 'light') applyTheme(true);
-    else if (saved === 'dark') applyTheme(false);
-    else {
-        const prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
-        applyTheme(prefersLight);
+    if (saved === 'dark') {
+        applyTheme(false);
+    } else {
+        applyTheme(true);
     }
 
     themeToggle.addEventListener('click', () => {
@@ -126,41 +125,4 @@ if (themeToggle) {
     });
 })();
 
-// Auto-play background music
-(function() {
-    let audioPath = 'assets/sounds/Fredji - Happy Life.mp3';
-    const path = window.location.pathname;
 
-    // If the page is inside a subdirectory, adjust the path
-    if (path.includes('/posts/') || path.includes('/project-details/')) {
-        audioPath = '../' + audioPath;
-    }
-
-    const audio = new Audio(audioPath);
-    audio.loop = true;
-    audio.volume = 0.3; // Set a moderate volume
-
-    let hasInteracted = false;
-
-    function playAudio() {
-        if (audio.paused) {
-            const playPromise = audio.play();
-            if (playPromise !== undefined) {
-                playPromise.catch(error => {
-                    console.warn("Audio play was prevented by browser.", error);
-                    // Set up a one-time interaction listener to try again
-                    document.addEventListener('click', playOnInteraction, { once: true });
-                    document.addEventListener('keydown', playOnInteraction, { once: true });
-                });
-            }
-        }
-    }
-
-    function playOnInteraction() {
-        playAudio();
-    }
-    
-    // Attempt to play right away. If it fails, the catch block above will set up listeners.
-    playAudio();
-
-})();

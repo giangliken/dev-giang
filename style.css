@@ -754,34 +754,7 @@ main {
     margin-top: auto;
 }
 
-/* Blog */
-.blog-list {
-    display: grid;
-    gap: 18px;
-}
 
-.blog-meta {
-    font-size: 0.8rem;
-    color: var(--muted);
-    margin-bottom: 4px;
-}
-
-.blog-card h3 {
-    margin-top: 0;
-    margin-bottom: 8px;
-}
-
-.blog-card p {
-    font-size: 0.9rem;
-    color: var(--muted);
-    margin-bottom: 10px;
-}
-
-.blog-link {
-    font-size: 0.85rem;
-    color: var(--accent);
-    text-decoration: none;
-}
 
 /* Contact */
 .contact-wrapper {
@@ -1208,20 +1181,7 @@ main {
     box-shadow: var(--shadow-soft);
 }
 
-/* Blog Post Code Blocks */
-.post-content pre {
-    background: var(--overlay-x);
-    border: 1px solid var(--border-subtle);
-    border-radius: 12px;
-    padding: 16px;
-    overflow-x: auto;
-    font-family: "Fira Code", monospace;
-    font-size: 0.9rem;
-}
 
-.post-content code {
-    font-family: "Fira Code", monospace;
-}
 
 /* Inline code */
 p code, li code {
